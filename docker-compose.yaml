@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  front:
+    build:
+      context: ./client
+
+    container_name: front
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_BACKEND_URL=http://back:4000
+    networks:
+      - "mynetwork"
+
+  backend:
+    build:
+      context: ./server
+
+    container_name: back
+    ports:
+      - "4000:4000"
+    environment:
+      - MONGODB_URI=mongodb+srv://shanujr9350:shanujr9350@cluster0.al45c.mongodb.net
+    networks:
+      - "mynetwork"
+
+networks:
+  mynetwork:
+    driver: bridge
