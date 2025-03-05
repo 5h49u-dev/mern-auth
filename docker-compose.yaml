@@ -9,7 +9,7 @@ services:
     ports:
       - "5173:5173"
     environment:
-      - VITE_BACKEND_URL=http://back:4000
+      - VITE_BACKEND_URL=http://backend:4000
     networks:
       - "mynetwork"
 
@@ -17,7 +17,7 @@ services:
     build:
       context: ./server
 
-    container_name: back
+    container_name: backend
     ports:
       - "4000:4000"
     environment:
