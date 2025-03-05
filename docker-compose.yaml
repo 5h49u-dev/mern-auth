@@ -17,7 +17,7 @@ services:
     build:
       context: ./server
 
-    container_name: backend
+    container_name: back
     ports:
       - "4000:4000"
     environment:
