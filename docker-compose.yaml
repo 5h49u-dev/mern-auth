@@ -21,7 +21,7 @@ services:
     ports:
       - "4000:4000"
     environment:
-      - MONGODB_URI=mongodb+srv://shanujr9350:shanujr9350@cluster0.al45c.mongodb.net
+      - MONGODB_URI=mongodb+srv://:@cluster0.al45c.mongodb.net
     networks:
       - "mynetwork"
 
