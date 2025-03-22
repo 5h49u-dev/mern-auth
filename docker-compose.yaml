@@ -9,7 +9,7 @@ services:
     ports:
       - "5173:5173"
     environment:
-      - VITE_BACKEND_URL=http://backend:4000
+      - VITE_BACKEND_URL=http://34.47.230.7:4000
     networks:
       - "mynetwork"
 
